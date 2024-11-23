@@ -1,4 +1,5 @@
 {-# LANGUAGE InstanceSigs #-}
+module Frecuencia where
 
 -- Definición del tipo de datos Frecuencia que asocia un valor con su frecuencia.
 data Frecuencia a = Frecuencia a Int
@@ -7,7 +8,7 @@ data Frecuencia a = Frecuencia a Int
 -- Instancia de la clase Show para Frecuencia, permite convertir una Frecuencia a una cadena de caracteres.
 instance Show a => Show (Frecuencia a) where
   show :: Frecuencia a -> String
-  show (Frecuencia x y) = "Valor: " ++ show x ++ " - Frecuencia: " ++ show y
+  show (Frecuencia x y) = show x ++ " : " ++ show y
 
 -- Instancia de la clase Ord para Frecuencia, permite comparar frecuencias basándose en el número de ocurrencias.
 instance Eq a => Ord (Frecuencia a) where

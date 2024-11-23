@@ -1,4 +1,6 @@
 {-# LANGUAGE InstanceSigs #-}
+module Hoffman where
+
 import qualified Data.Map as Map
 import Text.Read (Read(..), ReadPrec, Lexeme(Ident, Punc), lexP, parens, prec, readPrec, step)
 import Control.Applicative ((<|>))
